@@ -772,7 +772,7 @@ abstract class GFAddOn {
 				'handle'   => 'gaddon_results_js',
 				'src'      => GFAddOn::get_gfaddon_base_url() . "/js/gaddon_results{$min}.js",
 				'version'  => GFCommon::$version,
-				'deps'     => array( 'jquery', 'sack', 'jquery-ui-resizable', 'gform_datepicker_init', 'google_charts', 'gform_field_filter' ),
+				'deps'     => array( 'sack', 'jquery-ui-resizable', 'gform_datepicker_init', 'google_charts', 'gform_field_filter' ),
 				'callback' => array( 'GFResults', 'localize_results_scripts' ),
 				'enqueue'  => array(
 					array( 'admin_page' => array( 'results' ) ),
@@ -782,7 +782,7 @@ abstract class GFAddOn {
 				'handle'  => 'gaddon_repeater',
 				'src'     => GFAddOn::get_gfaddon_base_url() . "/js/repeater{$min}.js",
 				'version' => GFCommon::$version,
-				'deps'    => array( 'jquery' ),
+				'deps'    => array(  ),
 				'enqueue' => array(
 					array(
 						'admin_page' => array( 'form_settings' ),
@@ -793,7 +793,7 @@ abstract class GFAddOn {
 				'handle'   => 'gaddon_fieldmap_js',
 				'src'      => GFAddOn::get_gfaddon_base_url() . "/js/gaddon_fieldmap{$min}.js",
 				'version'  => GFCommon::$version,
-				'deps'     => array( 'jquery', 'gaddon_repeater' ),
+				'deps'     => array(  'gaddon_repeater' ),
 				'enqueue'  => array(
 					array( 'admin_page' => array( 'form_settings' ) ),
 				)
@@ -802,7 +802,7 @@ abstract class GFAddOn {
 				'handle'   => 'gaddon_genericmap_js',
 				'src'      => GFAddOn::get_gfaddon_base_url() . "/js/gaddon_genericmap{$min}.js",
 				'version'  => GFCommon::$version,
-				'deps'     => array( 'jquery', 'gaddon_repeater' ),
+				'deps'     => array(  'gaddon_repeater' ),
 				'enqueue'  => array(
 					array( 'admin_page' => array( 'form_settings' ) ),
 				)
@@ -811,7 +811,7 @@ abstract class GFAddOn {
 				'handle'   => 'gaddon_selectcustom_js',
 				'src'      => GFAddOn::get_gfaddon_base_url() . "/js/gaddon_selectcustom{$min}.js",
 				'version'  => GFCommon::$version,
-				'deps'     => array( 'jquery' ),
+				'deps'     => array(),
 				'enqueue'  => array(
 					array( 'admin_page' => array( 'form_settings', 'plugin_settings' ) ),
 				)

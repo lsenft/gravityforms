@@ -1930,7 +1930,7 @@ class GFFormDisplay {
 
 		// enqueue jQuery every time form is displayed to allow 'gform_post_render' js hook
 		// to be available to users even when GF is not using it
-		wp_enqueue_script( 'jquery' );
+		//wp_enqueue_script( 'jquery' );
 
 	}
 
@@ -2002,9 +2002,9 @@ class GFFormDisplay {
 			}
 		}
 
-		if ( ! wp_script_is( 'jquery' ) ) {
-			$scripts[] = 'jquery';
-		}
+//		if ( ! wp_script_is( 'jquery' ) ) {
+//			$scripts[] = 'jquery';
+//		}
 
 		foreach ( $scripts as $script ) {
 			wp_enqueue_script( $script );

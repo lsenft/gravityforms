@@ -1941,48 +1941,48 @@ class GFForms {
 		$version  = GFForms::$version;
 		$min      = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG || isset( $_GET['gform_debug'] ) ? '' : '.min';
 
-		wp_register_script( 'gform_chosen', $base_url . '/js/chosen.jquery.min.js', array( 'jquery' ), $version );
+		wp_register_script( 'gform_chosen', $base_url . '/js/chosen.jquery.min.js', array(), $version );
 		wp_register_script( 'gform_conditional_logic', $base_url . "/js/conditional_logic{$min}.js", array(
-			'jquery',
+			//'jquery',
 			'gform_gravityforms'
 		), $version );
 		wp_register_script( 'gform_datepicker_init', $base_url . "/js/datepicker{$min}.js", array(
-			'jquery',
+			//'jquery',
 			'jquery-ui-datepicker',
 			'gform_gravityforms'
 		), $version, true );
-		wp_register_script( 'gform_floatmenu', $base_url . "/js/floatmenu_init{$min}.js", array( 'jquery' ), $version );
+		wp_register_script( 'gform_floatmenu', $base_url . "/js/floatmenu_init{$min}.js", array(  ), $version );
 		wp_register_script( 'gform_form_admin', $base_url . "/js/form_admin{$min}.js", array(
-			'jquery',
+			//'jquery',
 			'jquery-ui-autocomplete',
 			'gform_placeholder',
 			'gform_gravityforms',
 		), $version );
 		wp_register_script( 'gform_form_editor', $base_url . "/js/form_editor{$min}.js", array(
-			'jquery',
+			//'jquery',
 			'gform_json',
 			'gform_placeholder'
 		), $version );
-		wp_register_script( 'gform_forms', $base_url . "/js/forms{$min}.js", array( 'jquery' ), $version );
+		wp_register_script( 'gform_forms', $base_url . "/js/forms{$min}.js", array(), $version );
 		wp_register_script( 'gform_gravityforms', $base_url . "/js/gravityforms{$min}.js", array(
-			'jquery',
+			//'jquery',
 			'gform_json'
 		), $version );
-		wp_register_script( 'gform_json', $base_url . "/js/jquery.json{$min}.js", array( 'jquery' ), $version, true );
-		wp_register_script( 'gform_masked_input', $base_url . '/js/jquery.maskedinput.min.js', array( 'jquery' ), $version );
-		wp_register_script( 'gform_menu', $base_url . "/js/menu{$min}.js", array( 'jquery' ), $version );
-		wp_register_script( 'gform_placeholder', $base_url . '/js/placeholders.jquery.min.js', array( 'jquery' ), $version );
+		wp_register_script( 'gform_json', $base_url . "/js/jquery.json{$min}.js", array(  ), $version, true );
+		wp_register_script( 'gform_masked_input', $base_url . '/js/jquery.maskedinput.min.js', array(), $version );
+		wp_register_script( 'gform_menu', $base_url . "/js/menu{$min}.js", array( ), $version );
+		wp_register_script( 'gform_placeholder', $base_url . '/js/placeholders.jquery.min.js', array(), $version );
 		wp_register_script( 'gform_tooltip_init', $base_url . "/js/tooltip_init{$min}.js", array( 'jquery-ui-tooltip' ), $version );
-		wp_register_script( 'gform_textarea_counter', $base_url . "/js/jquery.textareaCounter.plugin{$min}.js", array( 'jquery' ), $version );
+		wp_register_script( 'gform_textarea_counter', $base_url . "/js/jquery.textareaCounter.plugin{$min}.js", array( ), $version );
 		wp_register_script( 'gform_field_filter', $base_url . "/js/gf_field_filter{$min}.js", array(
-			'jquery',
+			
 			'gform_datepicker_init'
 		), $version );
 		wp_register_script( 'gform_shortcode_ui', $base_url . "/js/shortcode-ui{$min}.js", array(
-			'jquery',
+			
 			'wp-backbone'
 		), $version, true );
-		wp_register_script( 'gform_system_report_clipboard', $base_url . '/includes/system-status/js/clipboard.min.js', array( 'jquery' ), $version, true );
+		wp_register_script( 'gform_system_report_clipboard', $base_url . '/includes/system-status/js/clipboard.min.js', array(  ), $version, true );
 
 		wp_register_style( 'gform_admin', $base_url . "/css/admin{$min}.css", array(), $version );
 		wp_register_style( 'gform_chosen', $base_url . "/css/chosen{$min}.css", array(), $version );
@@ -3482,7 +3482,7 @@ class GFForms {
 		}
 
 		// Enqueuing Chosen script and styling.
-		wp_enqueue_script( 'gform_chosen', false, array( 'jquery' ), GFCommon::$version, true );
+		wp_enqueue_script( 'gform_chosen', false, array(  ), GFCommon::$version, true );
 		wp_enqueue_style( 'gform_chosen' );
 
 		?>

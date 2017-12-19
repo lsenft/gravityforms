@@ -121,7 +121,7 @@ if ( class_exists( 'GFForms' ) ) {
 					'handle'  => 'gfwebapi_settings.js',
 					'src'     => GFCommon::get_base_url() . "/includes/webapi/js/gfwebapi_settings{$min}.js",
 					'version' => $this->_version,
-					'deps'    => array( 'jquery', 'thickbox' ),
+					'deps'    => array( 'thickbox' ),
 					'enqueue' => array(
 						array( 'admin_page' => array( 'plugin_settings' ) ),
 					)

@@ -194,7 +194,7 @@ abstract class GFFeedAddOn extends GFAddOn {
 				'handle'    => 'gaddon_feedorder',
 				'src'       => $this->get_gfaddon_base_url() . "/js/gaddon_feedorder{$min}.js",
 				'version'   => GFCommon::$version,
-				'deps'      => array( 'jquery', 'jquery-ui-sortable' ),
+				'deps'      => array( 'jquery-ui-sortable' ),
 				'in_footer' => false,
 				'enqueue'   => array(
 					array(

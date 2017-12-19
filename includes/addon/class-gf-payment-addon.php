@@ -3148,7 +3148,7 @@ abstract class GFPaymentAddOn extends GFFeedAddOn {
 				'handle'    => 'gaddon_token',
 				'src'       => $this->get_gfaddon_base_url() . "/js/gaddon_token{$min}.js",
 				'version'   => GFCommon::$version,
-				'deps'      => array( 'jquery' ),
+				'deps'      => array(  ),
 				'in_footer' => false,
 				'enqueue'   => array(
 					array( $this, 'enqueue_creditcard_token_script' )

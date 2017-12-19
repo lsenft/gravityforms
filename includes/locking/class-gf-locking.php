@@ -114,9 +114,9 @@ abstract class GFLocking {
 	public function register_scripts() {
 		$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG || isset( $_GET['gform_debug'] ) ? '' : '.min';
 		$locking_path = GFCommon::get_base_url() . '/includes/locking/';
-		wp_register_script( 'gforms_locking', $locking_path . "js/locking{$min}.js", array( 'jquery', 'heartbeat' ), GFCommon::$version );
-		wp_register_script( 'gforms_locking_view', $locking_path . "js/locking-view{$min}.js", array( 'jquery', 'heartbeat' ), GFCommon::$version );
-		wp_register_script( 'gforms_locking_list', $locking_path . "js/locking-list{$min}.js", array( 'jquery', 'heartbeat' ), GFCommon::$version );
+		wp_register_script( 'gforms_locking', $locking_path . "js/locking{$min}.js", array(  'heartbeat' ), GFCommon::$version );
+		wp_register_script( 'gforms_locking_view', $locking_path . "js/locking-view{$min}.js", array('heartbeat' ), GFCommon::$version );
+		wp_register_script( 'gforms_locking_list', $locking_path . "js/locking-list{$min}.js", array( 'heartbeat' ), GFCommon::$version );
 		wp_register_style( 'gforms_locking_css', $locking_path . "css/locking{$min}.css", array(), GFCommon::$version );
 		wp_register_style( 'gforms_locking_list_css', $locking_path . "css/locking-list{$min}.css", array(), GFCommon::$version );
 
