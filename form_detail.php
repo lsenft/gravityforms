@@ -187,10 +187,6 @@ class GFFormDetail {
 		}
 		?>
 
-		<?php // link to the google webfont library ?>
-		<style type="text/css">
-			@import url('//fonts.googleapis.com/css?family=Shadows+Into+Light+Two');
-		</style>
 
 		<form method="post" id="form_trash">
 			<?php wp_nonce_field( 'gforms_trash_form', 'gforms_trash_form' ); ?>
@@ -333,10 +329,7 @@ class GFFormDetail {
 
 			<?php $no_fields_style = ! empty( $form['fields'] ) ? ' style="display:none;"' : null; ?>
 
-				<?php // link to the google webfont library ?>
-				<style type="text/css">
-					@import url('//fonts.googleapis.com/css?family=Shadows+Into+Light+Two');
-				</style>
+				
 				<li id="no-fields"<?php echo $no_fields_style; ?>>
 
 					<div class="newform_notice"><?php esc_html_e( "This form doesn't have any fields yet. Follow the steps below to get started.", 'gravityforms' ); ?>
